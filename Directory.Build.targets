@@ -16,6 +16,7 @@
 
   <Import
       Project="$([System.IO.Path]::GetDirectoryName($(MSBuildThisFileDirectory))).override.targets"
-      Condition=" Exists('$([System.IO.Path]::GetDirectoryName($(MSBuildThisFileDirectory))).override.targets') "
-  />
+      Condition=" Exists('$([System.IO.Path]::GetDirectoryName($(MSBuildThisFileDirectory))).override.targets') "/>
+
+  <Import Project="RedundantSigningWorkarounds.targets" />
 </Project>
